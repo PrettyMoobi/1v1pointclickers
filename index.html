@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Online apartir do Vercel. Copyright pela X10Publisher 2022.-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,21 +49,28 @@
     </style>
 </head>
 <body>
+    <!-- Conteúdo do Pop up 
+    Deve conter:
+    1- Input de texto para colocar o Nome da Partida
+    2- Input de texto para colocar o Nome do Jogador 1
+    3- Caixa de seleção de tempos predefinidos (120, 240 e 480)
+    4- Checkbox de partida (ganha por cliques) ou (ganha por pontos)
+    -->
     <div id="overlay"></div>
     <div id="popup">
         <div class="popupcontent">
-            <h1 class="tit">Vamos criar uma partida</h1>
+            <h1 class="title">Vamos criar uma partida</h1>
         </div>
         <div>
-
+            
         </div class="partida">
             <form>
                 <div>
                 <p>Configurações da Partida</p>
             </div>
-                <p>Nome da partida</p><input type="text"></input>
+                <input placeholder="Nome da Partida" type="text"></input>
                 <div class="create">
-                <button>Criar Partida</button>
+                <button type="submit">Criar Partida</button>
             </div>
             </form>
         </div>
@@ -73,8 +81,10 @@
                 element.style.opacity = 1;
         }
     </script>
+
+    <!-- Conteúdo da Página -->
     <h1>1v1 PointClick</h1>
-    <button onclick={createpopup()}>Criar uma Partida</button>
+    <button type="button" onclick={createpopup()}>Criar uma Partida</button>
     <a href="pages/partida.html">Entrar uma partida</a>
 </body>
 </html>
