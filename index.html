@@ -30,7 +30,7 @@
         opacity: 1;
     }
 
-    #Partida {
+    .Partida {
         font-family: "Times New Roman", Times, serif;
         font-size: 20px;
     }
@@ -40,31 +40,36 @@
         padding: 20px;
     }
 
-    .partida{
+    #partida{
         padding: 20px;
     }
+
+    
     </style>
 </head>
 <body>
     <div id="overlay"></div>
     <div id="popup">
         <div class="popupcontent">
-            <h1 id="titulo">Vamos criar uma partida</h1>
+            <h1 class="tit">Vamos criar uma partida</h1>
         </div>
-        <form>
-            <div>
-            <p id="Partida" class="partida">Configurações da Partida</p>
-         </div>
-            <p>Nome da partida</p><input type="text"></input>
-            <div class="create">
-            <button>Criar Partida</button>
+        <div>
+
+        </div class="partida">
+            <form>
+                <div>
+                <p>Configurações da Partida</p>
+            </div>
+                <p>Nome da partida</p><input type="text"></input>
+                <div class="create">
+                <button>Criar Partida</button>
+            </div>
+            </form>
         </div>
-        </form>
-    </div>
     
     <script>
         function createpopup() {
-            document.querySelector('#Partida');
+            document.querySelector('.Partida');
                 element.style.opacity = 1;
         }
     </script>

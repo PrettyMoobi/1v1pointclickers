@@ -6,13 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partida 1v1 </title>
     <style>
+        #title {
+            font-size: 50px;
+            background-color: blue;
+        }
+        
+        #playerbar {
+            font-size: 30px;
+            background-color: red;
+            
+        }
 
+        #matchstyle {
+            background-color: aqua;
+        }
+
+        #button {
+            background-color: black;
+            color: white;
+            font-size: 50px;
+            
+        }
     </style>
 </head>
 <body>
     <script>
         let clicks = 0;
         let timeleft = 20;
+        let player1name = "Felipe"
+        localStorage.setItem('Player1Name', player1name)
+        let playername = localStorage.getItem('Player1Name')
         var intervalId = window.setInterval(function(){
   clock()
 }, 1000);
@@ -36,13 +59,17 @@
         }
          
     </script>
-    <h1>1v1 Pointclick</h1>
-    <h1>Tempo restante: <span id="TimeLeft"></span></h1>
+
+    <h1 id="title">1v1 Pointclick</h1> <h1 id="playerbar"> <span id="Player1"></span> vs Jogador</h1>
+    <div id="matchstyle">
+    <h1>Tempo restante: <span id="TimeLeft"></span>s</h1>
     <a>Clique o botão abaixo o mais rápido possível!</a>
     <h1>Você tem: <span id="Valor"></span> Pontos</h1>
+    <script>document.getElementById("Player1").innerHTML = playername</script>
     <script>document.getElementById("Valor").innerHTML = clicks;</script>
     <script>document.getElementById("TimeLeft").innerHTML = timeleft;</script>
-    <button onclick={addclick()}>Clique o mais rápido possível!!</button>
+    <button id="button" onclick={addclick()}>Clique o mais rápido possível!!</button>
     <button onclick={removeclick()}>Remova Pontos do Outro Jogador</button>
+</div>
 </body>
 </html>
