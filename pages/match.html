@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partida 1v1 </title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        let clicks = 0;
+        let timeleft = 20;
+        var intervalId = window.setInterval(function(){
+  clock()
+}, 1000);
+        function addclick() {
+            clicks = clicks + 1;
+            console.log(clicks);
+            document.getElementById("Valor").innerHTML = clicks;
+        }
+        function removeclick() {
+            clicks = clicks - 1;
+            document.getElementById("Valor").innerHTML = clicks;
+        }
+        function clock() {
+            timeleft = timeleft - 1;
+            document.getElementById("TimeLeft").innerHTML = timeleft;
+            if(timeleft == 0) {
+               <!--Abrir Tela de resultados com as informações das váriaveis-->
+               localStorage.setItem('pointsResult', clicks);
+               window.location.href = "results.html"
+            }
+        }
+         
+    </script>
+    <h1>1v1 Pointclick</h1>
+    <h1>Tempo restante: <span id="TimeLeft"></span></h1>
+    <a>Clique o botão abaixo o mais rápido possível!</a>
+    <h1>Você tem: <span id="Valor"></span> Pontos</h1>
+    <script>document.getElementById("Valor").innerHTML = clicks;</script>
+    <script>document.getElementById("TimeLeft").innerHTML = timeleft;</script>
+    <button onclick={addclick()}>Clique o mais rápido possível!!</button>
+    <button onclick={removeclick()}>Remova Pontos do Outro Jogador</button>
+</body>
+</html>

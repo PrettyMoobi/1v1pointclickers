@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1v1 PointClicker</title>
+    <style>
+        #overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: #999;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        z-index: 100;
+    }
+
+    #popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: rgb(90, 65, 127);
+        width: 500px;
+        height: 500px;
+        margin-left: -250px; /*Half the value of width to center div*/
+        margin-top: -250px; /*Half the value of height to center div*/
+        z-index: 200;
+        opacity: 1;
+    }
+
+    #Partida {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+    }
+
+    #titulo{
+        background-color: rgb(58, 58, 139);
+        padding: 20px;
+    }
+
+    .partida{
+        padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div id="popup">
+        <div class="popupcontent">
+            <h1 id="titulo">Vamos criar uma partida</h1>
+        </div>
+        <form>
+            <div>
+            <p id="Partida" class="partida">Configurações da Partida</p>
+         </div>
+            <p>Nome da partida</p><input type="text"></input>
+            <div class="create">
+            <button>Criar Partida</button>
+        </div>
+        </form>
+    </div>
+    
+    <script>
+        function createpopup() {
+            document.querySelector('#Partida');
+                element.style.opacity = 1;
+        }
+    </script>
+    <h1>1v1 PointClick</h1>
+    <button onclick={createpopup()}>Criar uma Partida</button>
+    <a href="pages/partida.html">Entrar uma partida</a>
+</body>
+</html>

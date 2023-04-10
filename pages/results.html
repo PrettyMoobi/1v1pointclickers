@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    
+</head>
+<body>
+    
+    <h1>Resultados: <span id="Results"></span></h1>
+    <p> Quantidade de clicks: </p>
+    <p> Tempo decorrido </p> 
+    <a href="partida.html"></a>
+    <script>
+        let clicksresult = localStorage.getItem('pointsResult');
+        console.log(clicksresult)
+        document.getElementById("Results").innerHTML = clicksresult;
+        </script>
+</body>
+</html>
